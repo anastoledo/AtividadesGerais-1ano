@@ -1,0 +1,29 @@
+op=0
+echo "Digite um valor"
+read valor1
+echo "Digite outro valor"
+read valor2
+while [ $op != "S" ]
+	do
+ 		echo ""
+ 		echo "1 – Somar"
+ 		echo "2 – Subtrair"
+		echo "3 – Multiplicar"
+		echo "4 – Dividir"
+		echo -n "Informe a opção: "
+		read op
+	        case $op in
+ 		   1) let resultado=$valor1+$valor2;;
+ 		   2) let resultado=$valor1-$valor2;;
+ 		   3) let resultado=$valor1*$valor2;;
+ 		   4)  if [ $valor2 -eq 0 ]
+		       then
+			    echo "Erro: divisão por zero"
+			    exit
+		       else
+			    let resultado=$valor1/$valor2
+		       fi;;
+ 		   *) echo "Opção Invalida";;
+ 	       esac
+ 	echo "O resultado da operação é igual a $resultado"
+done

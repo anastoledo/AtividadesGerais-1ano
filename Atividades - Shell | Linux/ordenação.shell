@@ -1,0 +1,12 @@
+parametros=$#
+> arq$$
+while [ $# -gt 0 ] 
+do
+	echo $1 >> arq$$
+	shift
+done
+	echo " "
+	echo "Foram informados $parametros parâmetros"
+	echo " "
+sort arq$$
+rm arq$$

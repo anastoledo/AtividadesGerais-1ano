@@ -1,0 +1,8 @@
+num=$1
+i=0
+while [ $i -le $num ]
+do
+	echo -n "$i "
+	let i=$i+2
+done
+echo " "

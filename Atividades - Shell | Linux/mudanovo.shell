@@ -1,0 +1,16 @@
+lab@lab:~/IIR/bkp$ for a in `ls a*`
+> do
+>  echo $a
+>  mv $a novo$a
+> done
+a1.txt
+a2.txt
+a3.txt
+lab@lab:~/IIR/bkp$ ls
+novoa1.txt  novoa2.txt  novoa3.txt
+lab@lab:~/IIR/bkp$ ls -l
+total 12
+-rw-rw-r-- 1 lab lab 283 jul  3 14:13 novoa1.txt
+-rw-rw-r-- 1 lab lab 290 jul  3 14:13 novoa2.txt
+-rw-rw-r-- 1 lab lab 283 jul  3 14:13 novoa3.txt
+lab@lab:~/IIR/bkp$ 
